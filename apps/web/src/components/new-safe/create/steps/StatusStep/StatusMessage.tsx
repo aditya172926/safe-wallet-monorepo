@@ -15,10 +15,14 @@ const getStep = (status: SafeCreationEvent) => {
         instruction: 'Activate the account to unlock all features of your smart wallet',
       }
     case SafeCreationEvent.PROCESSING:
-    case SafeCreationEvent.RELAYING:
       return {
         description: 'We are activating your account',
         instruction: 'It can take some minutes to create your account, but you can check the progress below.',
+      }
+    case SafeCreationEvent.RELAYING:
+      return {
+        description: 'We are activating your account',
+        instruction: 'It can take some minutes to create your account.',
       }
     case SafeCreationEvent.FAILED:
       return {
